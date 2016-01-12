@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rUK-Ft-o3y">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--购彩大厅-->
+        <scene sceneID="Nt5-la-bJe">
+            <objects>
+                <tableViewController id="vzX-qb-425" customClass="GGHallController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="xEr-Ag-TFk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="vzX-qb-425" id="oi8-RF-AZa"/>
+                            <outlet property="delegate" destination="vzX-qb-425" id="cw5-Gq-Npv"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="购彩大厅" id="w6H-ai-DdC">
+                        <barButtonItem key="leftBarButtonItem" style="done" id="3dJ-jd-ADe">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cR3-aB-m6T">
+                                <rect key="frame" x="20" y="4" width="63" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="CS50_activity_image"/>
+                                <connections>
+                                    <action selector="didClickGiftBtn:" destination="vzX-qb-425" eventType="touchUpInside" id="WKl-Vg-Dl1"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ydv-Ld-e6g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="282" y="392"/>
+        </scene>
+        <!--Hall Nav View Controller-->
+        <scene sceneID="3bv-O9-C2i">
+            <objects>
+                <navigationController id="rUK-Ft-o3y" customClass="GGHallNavViewController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9eK-9p-Rbf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vzX-qb-425" kind="relationship" relationship="rootViewController" id="Xbt-GZ-19r"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yia-QV-h8F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-538" y="392"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CS50_activity_image" width="63" height="36"/>
+    </resources>
+</document>
